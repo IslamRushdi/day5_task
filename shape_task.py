@@ -16,10 +16,11 @@ class Shape():
 
 
 class Circle(Shape):
+    count = 0
     def __init__(self, color, radius):
         super().__init__('circle',color,0,0)
         self.__radius = radius
-        
+        Circle.count = Circle.count + 1
     
     def area(self):
         return math.pi*(self.__radius**2)
